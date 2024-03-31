@@ -1,0 +1,245 @@
+body {
+    font-family: 'Meiryo', sans-serif;
+    background-color: #e6f9ff;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+#main-nav {
+    background-color: #c3edff;
+    padding: 20px;
+    width: 330px;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 80px; 
+    margin-bottom: 80px; 
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+#main-nav h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 20px;
+    background-color: #fd17ab;
+    padding: 10px;
+    border-radius: 0;
+    left: -80px;
+    color: #fff;
+    position: relative;
+    transform: skew(-15deg);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-nav h2::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 58px 0;
+    border-color: transparent #fd17ab transparent transparent;
+}
+
+#main-nav h2 span {
+    transform: skew(15deg);
+    margin-left: 100px;
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#main-nav ul li {
+    margin-bottom: 0;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+#main-nav ul li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+#main-nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#img {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+#img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(343deg);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #main-nav {
+        width: 100%;
+        flex-shrink: 1;
+        padding:0%
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+
+    #main-nav h2 {
+        width: 100%;
+        transform: none;
+        justify-content: center;
+        left: 0px;
+        padding: 0%;
+    }
+
+    #main-nav h2::before {
+        display: none;
+    }
+
+    #main-nav h2 span {
+        transform: none;
+        margin-left: 0;
+    }
+
+    #main-nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    #main-nav ul li {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #main-nav ul li a {
+        font-size: 1.4rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .overlay {
+        font-size: 1.5rem;
+        transform: translate(-50%, -50%) rotate(343deg);
+        top: 60%;
+        width: 80%;
+    }
+}
+
+#posting-rules {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#posting-rules h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1d2088;
+}
+
+.rules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rule-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+}
+
+.rule-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1d2088;
+}
+
+.rule-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
